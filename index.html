@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniMart | Your Campus Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">UniMart.</a>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="nav-search" placeholder="Search phones, textbooks, hostels...">
+            </div>
+            <div class="nav-actions" id="nav-auth-container">
+                <button class="icon-btn" id="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                <a href="login.html" class="btn btn-outline" id="nav-login-btn">Log In</a>
+                <a href="signup.html" class="btn btn-primary" id="nav-signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Buy & Sell on Campus.<br>Safe, Fast, Zero Wahala.</h1>
+            <p>Join thousands of Nigerian students trading securely within the university community.</p>
+        </section>
+
+        <section class="categories" id="home-categories">
+            <button class="category-pill active" data-filter="All">🔥 All Items</button>
+            <button class="category-pill" data-filter="Phones"><i class="fa-solid fa-mobile-screen"></i> Phones</button>
+            <button class="category-pill" data-filter="Laptops"><i class="fa-solid fa-laptop"></i> Laptops</button>
+            <button class="category-pill" data-filter="Fashion"><i class="fa-solid fa-shirt"></i> Fashion</button>
+            <button class="category-pill" data-filter="Textbooks"><i class="fa-solid fa-book"></i> Textbooks</button>
+            <button class="category-pill" data-filter="Hostels"><i class="fa-solid fa-bed"></i> Hostels</button>
+        </section>
+
+        <section class="product-grid" id="dynamic-product-grid"></section>
+        <div id="no-results-msg" class="hidden" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+            <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 1rem;"></i><h3>No items found.</h3>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="color: var(--text-muted); font-size: 0.875rem;">© 2026 UniMart. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#" class="report-btn" onclick="openReportModal(event)"><i class="fa-solid fa-flag"></i> Report a User</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | UniMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" style="border-bottom: 2px solid var(--danger);">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">UniMart <span style="font-size: 0.875rem; color: var(--danger); font-weight: 600;">ADMIN</span></a>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle"><i class="fa-regular fa-moon"></i></button>
+                <a href="index.html" class="btn btn-outline">View Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;">Admin Control Center</h1>
+        
+        <div class="admin-tabs">
+            <button class="btn btn-primary" id="tab-approvals">Pending Approvals</button>
+            <button class="btn btn-outline" id="tab-users">Registered Users</button>
+            <button class="btn btn-outline" id="tab-transactions">Transactions</button>
+            <button class="btn btn-outline" id="tab-reports">User Reports</button>
+        </div>
+        
+        <div id="section-approvals"><div id="admin-pending-list"></div></div>
+        <div id="section-users" class="hidden"><div id="admin-users-list"></div></div>
+        <div id="section-transactions" class="hidden"><div id="admin-transactions-list"></div></div>
+        <div id="section-reports" class="hidden"><div id="admin-reports-list"></div></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="color: var(--text-muted); font-size: 0.875rem;">© 2026 UniMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>

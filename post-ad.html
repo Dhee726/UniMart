@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Item | UniMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">UniMart.</a>
+            <div class="nav-actions"><a href="index.html" class="icon-btn"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="form-container">
+            <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; text-align: center;">Sell an Item</h1>
+            <form id="post-ad-form">
+                <div class="form-group">
+                    <label class="form-label">Product Images</label>
+                    <div class="upload-area" id="cloudinary-upload-btn">
+                        <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; color: var(--text-muted); margin-bottom: 0.5rem;"></i><p>Tap to upload images</p>
+                    </div>
+                    <div class="image-preview-grid" id="image-preview-container"></div>
+                    <input type="hidden" id="uploaded_image_url" required>
+                </div>
+                <div class="form-group"><label class="form-label">Title</label><input type="text" id="ad-title" class="form-control" required></div>
+                <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div><label class="form-label">Price (₦)</label><input type="number" id="ad-price" class="form-control" required></div>
+                    <div><label class="form-label">Category</label>
+                        <select id="ad-category" class="form-control" required>
+                            <option value="">Select...</option><option value="Phones">Phones</option><option value="Laptops">Laptops</option><option value="Fashion">Fashion</option><option value="Textbooks">Textbooks</option><option value="Hostels">Hostels</option><option value="Misc">Miscellaneous</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="dynamic-fields-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;"></div>
+                <div class="form-group"><label class="form-label">Description</label><textarea class="form-control" id="ad-desc" style="min-height: 100px;" required></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Submit for Approval</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="footer-content"><p style="color: var(--text-muted); font-size: 0.875rem;">© 2026 UniMart. All rights reserved.</p></div></footer>
+    <div id="toast-container" class="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
